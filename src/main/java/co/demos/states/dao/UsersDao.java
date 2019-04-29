@@ -16,8 +16,14 @@ public class UsersDao {
 	private JdbcTemplate jdbcTemplate;
 
 	public List<User> findAll() {
-
 		return jdbcTemplate.query("SELECT * FROM users", new BeanPropertyRowMapper<>(User.class));
+	}
+
+	public void create(User user) {
+
+		String sql = "INSERT INTO Users (id,first_name, last_name, state_id) VALUES (?,?,?,?)";
+		jdbcTemplate.update(sql, user.getId(), user.getFirstName(), user.getLastName(), user.getStateId());
+
 	}
 
 }

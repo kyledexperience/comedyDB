@@ -28,16 +28,20 @@
 				<tr>
 					<td>${p.firstName}</td>
 					<td>${p.lastName}</td>
-					<td>
-						<!-- State -->
-					</td>
+					<td><!-- State Table Join --></td>
 				</tr>
 			</c:forEach>
 
-
-
-
 		</table>
+
+		<form method="post">
+			<p>
+				<input name="first" placeholder="First Name" /><input name="last" placeholder="Last Name" /><input type="number"
+					name="state" value="1"/>
+			</p>
+			<button type="submit">Add</button>
+
+		</form>
 
 	</div>
 </body>
