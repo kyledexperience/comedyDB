@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import co.demos.states.dao.UsersDao;
 import co.demos.states.dao.UsersDaoOld;
+import co.demos.states.entity.State;
 import co.demos.states.entity.User;
 
 @Controller
@@ -25,9 +26,14 @@ public class UserController {
 	@RequestMapping("/")
 	public ModelAndView home() {
 
+		ModelAndView mav = new ModelAndView("index");
 		List<User> users = daoOld.findAll();
+		List<State> states = dao.findAllStates();
 
-		return new ModelAndView("index", "list", users);
+		mav.addObject("list", users);
+		mav.addObject("state", states);
+
+		return mav;
 
 	}
 

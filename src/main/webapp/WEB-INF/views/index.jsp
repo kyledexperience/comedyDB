@@ -16,28 +16,42 @@
 
 		<h1 class="display-1">Comedy Greats</h1>
 
-		<table class="table">
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>State</th>
-			</tr>
-
-
-			<c:forEach var="p" items="${list}">
+		<div>
+			<table style="width:75%; float: left;" class="table">
 				<tr>
-					<td>${p.firstName}</td>
-					<td>${p.lastName}</td>
-					<td><!-- State Table Join --></td>
-				</tr>
-			</c:forEach>
+					<th>First Name</th>
+					<th>Last Name</th>
 
-		</table>
+				</tr>
+
+
+				<c:forEach var="p" items="${list}">
+					<tr>
+						<td>${p.firstName}</td>
+						<td>${p.lastName}</td>
+					</tr>
+				</c:forEach>
+
+			</table>
+
+			<!-- Table alongside names showing States (RightTable join) -->
+			<table style="width:25%;" class="table">
+				<tr>
+					<th>State</th>
+				</tr>
+				<c:forEach var="s" items="${state}">
+					<tr>
+						<td>${s.state}</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
 
 		<form method="post">
 			<p>
-				<input name="first" placeholder="First Name" /><input name="last" placeholder="Last Name" /><input type="number"
-					name="state" value="1"/>
+				<input name="first" placeholder="First Name" /><input name="last"
+					placeholder="Last Name" /><input type="number" name="state"
+					value="1" />
 			</p>
 			<button type="submit">Add</button>
 

@@ -48,7 +48,7 @@ public class UsersDaoOld {
 		String password = "javawins";
 
 		// Step #1: Load and Register Driver
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 
 		// Step #2: Create Connection
 		Connection con = DriverManager.getConnection(url, userName, password);

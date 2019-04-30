@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import co.demos.states.entity.State;
 import co.demos.states.entity.User;
 
 @Repository
@@ -17,6 +18,11 @@ public class UsersDao {
 
 	public List<User> findAll() {
 		return jdbcTemplate.query("SELECT * FROM users", new BeanPropertyRowMapper<>(User.class));
+	}
+
+	public List<State> findAllStates() {
+		return jdbcTemplate.query("SELECT * FROM states RIGHT JOIN users ON users.state_id=states.state_id",
+				new BeanPropertyRowMapper<>(State.class));
 	}
 
 	public void create(User user) {
