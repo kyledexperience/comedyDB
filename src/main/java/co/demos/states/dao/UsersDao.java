@@ -21,14 +21,14 @@ public class UsersDao {
 	}
 
 	public List<State> findAllStates() {
-		return jdbcTemplate.query("SELECT * FROM states RIGHT JOIN users ON users.state_id=states.state_id",
+		return jdbcTemplate.query("SELECT * FROM users RIGHT JOIN states ON users.state_id=states.state_id",
 				new BeanPropertyRowMapper<>(State.class));
 	}
 
 	public void create(User user) {
 
-		String sql = "INSERT INTO Users (id,first_name, last_name, state_id) VALUES (?,?,?,?)";
-		jdbcTemplate.update(sql, user.getId(), user.getFirstName(), user.getLastName(), user.getStateId());
+		String sql = "INSERT INTO Users (first_name, last_name, state_id) VALUES (?,?,?)";
+		jdbcTemplate.update(sql, user.getFirstName(), user.getLastName(), user.getStateId());
 
 	}
 

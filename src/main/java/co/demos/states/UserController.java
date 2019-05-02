@@ -42,8 +42,6 @@ public class UserController {
 			@RequestParam("state") Integer state) {
 
 		User user = new User();
-		int size = dao.findAll().size();
-		user.setId((long) size + 1);
 
 		user.setFirstName(first);
 		user.setLastName(last);
