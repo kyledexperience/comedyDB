@@ -21,6 +21,7 @@
 				<tr>
 					<th>First Name</th>
 					<th>Last Name</th>
+					<th></th>
 
 				</tr>
 
@@ -29,6 +30,9 @@
 					<tr>
 						<td>${p.firstName}</td>
 						<td>${p.lastName}</td>
+						<td>
+						<a href="delete/${p.id}" >Delete</a>
+						</td>
 					</tr>
 				</c:forEach>
 
