@@ -16,7 +16,7 @@
 
 		<h1 class="display-1">Comedy Greats</h1>
 
-		<div>
+		<div class="container">
 			<table style="width:75%; float: left;" class="table">
 				<tr>
 					<th>First Name</th>
@@ -51,6 +51,7 @@
 			</table>
 		</div>
 
+		<p class="display-4">Add to the list</p>
 		<form method="post">
 			<p>
 				<input name="first" placeholder="First Name" /><input name="last"
@@ -60,6 +61,8 @@
 			<button type="submit">Add</button>
 
 		</form>
+		
+		<p class="display-5" id="bottom"><br>experienceD</p>
 
 	</div>
 </body>

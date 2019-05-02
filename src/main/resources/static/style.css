@@ -7,3 +7,9 @@ h1{
 div {
 	font-size: 30px;
 }
+
+#bottom {
+	text-align: center;
+	font-size: 20px;
+	color: #b8b9bf;
+}
