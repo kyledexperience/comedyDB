@@ -6,13 +6,13 @@ body {
 }
 
 .container {
-	perspective: 1200px;
+	perspective: 1400px;
 	margin-left: 2em;
-	padding-top: 5%;
+	padding-top: 2%;
 }
 
 .inner {
-	transform: rotateY(-20deg);
+	transform: rotateY(-15deg);
 	margin-right: 8em;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 .background {
-	min-height: 700px;
+	max-height: 750px;
 	background-size: cover;
 	width: 100%;
 	z-index: -1;
@@ -43,4 +43,14 @@ table td, th {
 	text-shadow: 0.13em -0.13em 0px #0000aa;
 	letter-spacing: -0.05em;
 	font-size: 120px;
+}
+
+input[type=number]{
+	width: 5%;
+	
+}
+
+input[type=text]{
+	width: 20%;
+	
 }

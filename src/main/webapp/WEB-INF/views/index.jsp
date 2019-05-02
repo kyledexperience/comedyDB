@@ -56,14 +56,15 @@
 			</table>
 		</div>
 
+		
 		<h2 class="display-4">Add to the list</h2>
 		<form method="post">
 			<p>
-				<input name="first" placeholder="First Name" /><input name="last"
-					placeholder="Last Name" /><input type="number" name="state"
-					value="1" />
+				<input name="first" type="text" placeholder="First Name" />
+				<input name="last" type="text" placeholder="Last Name" />
+				<input name="state" type="number" value="1" />
 			</p>
-			<button type="submit">Add</button>
+			<button class="btn btn-light" type="submit">Add</button>
 
 		</form>
 
