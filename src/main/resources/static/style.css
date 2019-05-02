@@ -1,23 +1,18 @@
 @charset "UTF-8";
 
-h1{
-	color: #d15d17;
-	padding-top: 5%;
-	padding-bottom: 5%;
-}
-
 body {
 	font-size: 25px;
 	color: ghostwhite;
 }
 
-.container{
-	perspective: 1000px;
+.container {
+	perspective: 1200px;
 	margin-left: 2em;
+	padding-top: 5%;
 }
 
 .inner {
-	transform: rotateY(-15deg);
+	transform: rotateY(-20deg);
 	margin-right: 8em;
 }
 
@@ -27,7 +22,7 @@ body {
 	color: #d2d6e1;
 }
 
-.background{
+.background {
 	min-height: 700px;
 	background-size: cover;
 	width: 100%;
@@ -35,7 +30,17 @@ body {
 	position: fixed;
 }
 
-table td,th{
+table td, th {
 	background-color: rgba(122, 122, 122, 0.5);
 	color: ghostwhite;
+}
+
+.wordart .text {
+	font-family: Impact, sans-serif;
+	color: #24c0fd;
+	-webkit-text-stroke: 0.01em #0000aa;
+	filter: progid:DXImageTransform.Microsoft.Glow(Color=#0000aa, Strength=1);
+	text-shadow: 0.13em -0.13em 0px #0000aa;
+	letter-spacing: -0.05em;
+	font-size: 120px;
 }

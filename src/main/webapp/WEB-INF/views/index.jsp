@@ -21,7 +21,8 @@
 
 		<div class="inner">
 
-			<h1 class="display-3">Comedy Greats</h1>
+			<div class="wordart">
+			<span class="text">Comedy Greats</span></div>
 			
 			<table style="width: 75%; float: left;" class="table">
 				<tr>
