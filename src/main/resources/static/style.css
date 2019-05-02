@@ -1,15 +1,41 @@
 @charset "UTF-8";
 
 h1{
-	color: #fe4418;
+	color: #d15d17;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 
-div {
-	font-size: 30px;
+body {
+	font-size: 25px;
+	color: ghostwhite;
+}
+
+.container{
+	perspective: 1000px;
+	margin-left: 2em;
+}
+
+.inner {
+	transform: rotateY(-15deg);
+	margin-right: 8em;
 }
 
 #bottom {
 	text-align: center;
 	font-size: 20px;
-	color: #b8b9bf;
+	color: #d2d6e1;
+}
+
+.background{
+	min-height: 700px;
+	background-size: cover;
+	width: 100%;
+	z-index: -1;
+	position: fixed;
+}
+
+table td,th{
+	background-color: rgba(122, 122, 122, 0.5);
+	color: ghostwhite;
 }

@@ -12,12 +12,18 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+	<img src="cellar.jpg" class="background">
+
 	<div class="container">
 
-		<h1 class="display-1">Comedy Greats</h1>
 
-		<div class="container">
-			<table style="width:75%; float: left;" class="table">
+
+		<div class="inner">
+
+			<h1 class="display-3">Comedy Greats</h1>
+			
+			<table style="width: 75%; float: left;" class="table">
 				<tr>
 					<th>First Name</th>
 					<th>Last Name</th>
@@ -30,16 +36,14 @@
 					<tr>
 						<td>${p.firstName}</td>
 						<td>${p.lastName}</td>
-						<td>
-						<a href="delete/${p.id}" >Delete</a>
-						</td>
+						<td><a href="delete/${p.id}">Delete</a></td>
 					</tr>
 				</c:forEach>
 
 			</table>
 
 			<!-- Table alongside names showing States (RightTable join) -->
-			<table style="width:25%;" class="table">
+			<table style="width: 25%;" class="table">
 				<tr>
 					<th>State</th>
 				</tr>
@@ -51,7 +55,7 @@
 			</table>
 		</div>
 
-		<p class="display-4">Add to the list</p>
+		<h2 class="display-4">Add to the list</h2>
 		<form method="post">
 			<p>
 				<input name="first" placeholder="First Name" /><input name="last"
@@ -61,8 +65,10 @@
 			<button type="submit">Add</button>
 
 		</form>
-		
-		<p class="display-5" id="bottom"><br>experienceD</p>
+
+		<p class="display-5" id="bottom">
+			<br>experienceD
+		</p>
 
 	</div>
 </body>
