@@ -30,10 +30,25 @@ body {
 	position: fixed;
 }
 
-table td, th {
+table td {
 	background-color: rgba(122, 122, 122, 0.5);
 	color: ghostwhite;
 }
+
+table th {
+	background-color: rgba(122, 122, 122, 0.9);
+}
+
+.table-hover tbody tr:hover td{
+	background-color: rgba(122, 122, 122, 0.7);
+	
+}
+
+div a:link {color: ghostwhite;}
+div a:hover {color: ghostwhite;}
+div a:visited {color: ghostwhite;}
+div a:active {color: ghostwhite;}
+
 
 .wordart .text {
 	font-family: Impact, sans-serif;
@@ -53,4 +68,17 @@ input[type=number]{
 input[type=text]{
 	width: 20%;
 	
+}
+
+#form{
+	font-size: 30px;
+	color: #2c2c2e;
+	
+}
+span{
+	font-size: 50px;
+}
+
+#state{
+	width: 50%;
 }

@@ -25,6 +25,13 @@ public class UsersDao {
 				new BeanPropertyRowMapper<>(State.class));
 	}
 
+	public User findById(Long id) {
+		User user = jdbcTemplate.queryForObject("SELECT * FROM users WHERE id = ?",
+				new BeanPropertyRowMapper<>(User.class), id);
+
+		return user;
+	}
+
 	public void create(User user) {
 
 		String sql = "INSERT INTO Users (first_name, last_name, state_id) VALUES (?,?,?)";
@@ -36,6 +43,18 @@ public class UsersDao {
 
 		String sql = "DELETE FROM users WHERE id=?";
 		jdbcTemplate.update(sql, id);
+
+	}
+
+	public void update(Long id, Integer stateId) {
+		String sql = "UPDATE users SET state_id=? WHERE id=?";
+		jdbcTemplate.update(sql, stateId, id);
+	}
+
+	public List<State> findStates() {
+
+		return jdbcTemplate.query("SELECT DISTINCT * FROM states order by state",
+				new BeanPropertyRowMapper<>(State.class));
 
 	}
 

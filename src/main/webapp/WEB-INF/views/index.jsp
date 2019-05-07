@@ -17,14 +17,13 @@
 
 	<div class="container">
 
-
-
 		<div class="inner">
 
 			<div class="wordart">
-			<span class="text">Comedy Greats</span></div>
-			
-			<table style="width: 75%; float: left;" class="table">
+				<span class="text">Comedy Greats</span>
+			</div>
+
+			<table style="width: 75%; float: left;" class="table  table-hover">
 				<tr>
 					<th>First Name</th>
 					<th>Last Name</th>
@@ -32,10 +31,9 @@
 
 				</tr>
 
-
 				<c:forEach var="p" items="${list}">
 					<tr>
-						<td>${p.firstName}</td>
+						<td><a href="edit/${p.id}">${p.firstName}</a></td>
 						<td>${p.lastName}</td>
 						<td><a href="delete/${p.id}">Delete</a></td>
 					</tr>
@@ -48,21 +46,23 @@
 				<tr>
 					<th>State</th>
 				</tr>
+
 				<c:forEach var="s" items="${state}">
 					<tr>
 						<td>${s.state}</td>
 					</tr>
 				</c:forEach>
+
 			</table>
 		</div>
 
-		
+
 		<h2 class="display-4">Add to the list</h2>
 		<form method="post">
 			<p>
-				<input name="first" type="text" placeholder="First Name" />
-				<input name="last" type="text" placeholder="Last Name" />
-				<input name="state" type="number" value="1" />
+				<input name="first" type="text" placeholder="First Name" /> <input
+					name="last" type="text" placeholder="Last Name" /> <input
+					name="state" type="number" value="1" />
 			</p>
 			<button class="btn btn-light" type="submit">Add</button>
 

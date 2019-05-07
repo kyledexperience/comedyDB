@@ -70,4 +70,29 @@ public class UserController {
 
 	}
 
+	@RequestMapping("/edit/{id}")
+	public ModelAndView edit(@PathVariable(value = "id", required = false) Long id) {
+
+		ModelAndView mav = new ModelAndView("edit");
+		List<State> states = dao.findStates();
+		User user = dao.findById(id);
+
+		mav.addObject("state", states);
+		mav.addObject("user", user);
+
+		return mav;
+
+	}
+
+	@PostMapping("/edit/{id}")
+	public ModelAndView edited(@RequestParam("id") Long id, @RequestParam("stateId") Integer stateId) {
+
+		ModelAndView mav = new ModelAndView("redirect:/");
+
+		dao.update(id, stateId);
+
+		return mav;
+
+	}
+
 }
